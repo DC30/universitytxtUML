@@ -1,0 +1,50 @@
+package university.x.model;
+
+signal RoomAvailable;
+signal RoomTaken;
+
+
+class Room{
+	int floor;
+	int number;
+	int capacity;
+	
+	void update(){}
+	void drop(){}
+	
+	//State machine
+	initial Init;
+	state Available;
+	state Taken;
+	
+	transition Initialize{
+		from Init;
+		to Available;
+		effect{
+			log("Room initialize--------------------------->");
+			this-> (EnrollmentHasRoom.subjectTaken).selectAny().enrollGui.roomAvailable();
+		}
+	}
+	
+	transition RoomOccupied{
+		from Available;
+		to Taken;
+		trigger RoomTaken;
+		effect {
+			log("Room is taken");
+			this->(EnrollmentHasRoom.subjectTaken).selectAny().enrollGui.roomTaken();
+		}
+	}
+	
+	transition RoomFree{
+		from Taken;
+		to Available;
+		trigger RoomAvailable;
+		effect {
+			log("Room is available");
+			this->(EnrollmentHasRoom.subjectTaken).selectAny().enrollGui.roomAvailable();
+		}
+	}
+	
+	
+}

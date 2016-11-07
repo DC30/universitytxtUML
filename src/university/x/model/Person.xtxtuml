@@ -1,0 +1,71 @@
+package university.x.model;
+
+
+signal InsertPerson;
+
+class Person{
+	
+//	PersonInterface gui;
+	int id;
+	String name;
+	int phoneNumber;
+	String emailAddress;
+	int birthDate;
+	String typePerson;
+	
+//	public Person(){
+//		gui = new PersonGUI();
+//	}
+	
+	void update(Person per){}
+	void drop(){}
+	
+	// the state machine
+		
+	initial Init;
+	state InsertData;
+	choice SelectPerson;
+	state InsertProfessor;
+	state InsertStudent;
+	
+	transition Register{
+		from Init;
+		to InsertData;
+		
+	}
+	
+	transition ChoosePerson{
+		from InsertData;
+		to SelectPerson;
+		trigger InsertPerson;
+	}
+	
+	transition IsProfessor{
+		from SelectPerson;
+		to InsertProfessor;
+		guard(typePerson.equals("P"));
+	}
+	
+	transition IsStudent{
+		from SelectPerson;
+		to InsertStudent;
+		guard(typePerson.equals("S"));
+	}
+	
+	public String getTypePerson() {
+		return typePerson;
+	}
+
+	public void setTypePerson(String typePerson) {
+		this.typePerson = typePerson;
+	}
+	
+	public String getName(){
+		return name;
+	}
+	
+	public void setName(String name){
+		this.name = name;
+	}
+	
+}

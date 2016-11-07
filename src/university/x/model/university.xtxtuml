@@ -1,0 +1,120 @@
+package university.x.model;
+
+
+class University{
+	int id;
+	String name;
+	
+	void update(){}
+	void drop(){}
+}
+
+association UniversityHasPerson{
+	1 University university;
+	* Person person;
+}
+
+class Student extends Person{
+	int codeNeptun;
+	int average;
+	boolean isScholarship;
+	String typeProg;
+	
+	 public void addStudent(Student student){}
+	 public void registerStudent(Student student){}
+	 void assignStudentCode(){}
+	 
+}
+
+
+class Faculty{
+	String name;
+	int phone;
+	
+	void addProgram(DegreeProgram program){}
+}
+
+class DegreeProgram{
+	int codeProgram;
+	String name;
+	String mision;
+	String vision;
+	
+	void update(){}
+	void drop(){}
+}
+
+association UniversityHasFaculty{
+	1 University university;
+	* Faculty faculty;
+}
+
+association FacultyHasProgram{
+	1 Faculty faculty;
+	* DegreeProgram program;
+}
+
+class Bachelor extends DegreeProgram{
+	String specializations;
+	String skill;
+	int admisionTest;
+	
+	void findCandidateBachelorStudent(){}
+}
+class Master extends DegreeProgram{
+	String specializations;
+	String fieldExperience;
+	int level;
+	
+	void findCandidateStudent(){}
+}
+
+class Subject {
+	
+	int codeSub;
+	String name;
+	int creditValue;
+	int semestre;
+	String typeSubject;
+	
+	public boolean isLecture(String type){
+		return type.equals("L");
+	}
+}
+
+composition BachelorHasSubject{
+	container Bachelor bachelor;
+	30 Subject subject;
+}
+
+composition MasterHasSubject{
+	container Master master;
+	20 Subject subject;
+}
+
+
+association Enrolled{
+	1 Student student;
+	* Enrollment subjectTaken;
+}
+
+composition SubjectHasProfessor{
+	container Enrollment subjectTaken;
+	1 Professor professor; 
+}
+
+composition SubjectHasEnrolment{
+	container Subject subject;
+	8 Enrollment subjectTaken;
+}
+
+composition EnrollmentHasRoom{
+	container Enrollment subjectTaken;
+	1 Room room; 
+}
+
+association StudentBelongsProgram{
+	1 Student student;
+	1 DegreeProgram program;
+}
+

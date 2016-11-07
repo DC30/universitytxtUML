@@ -1,0 +1,79 @@
+package university.x.model;
+
+import university.gui.EnrollInterface;
+import university.gui.PersonGUI;
+
+signal Check;
+signal Enroll;
+signal TermStarted;
+signal EndClass;
+
+class Enrollment {
+	EnrollInterface enrollGui;
+	String timeSlot;
+	String dateOfWeek;
+	
+		
+	public Enrollment(){
+		enrollGui = new PersonGUI();
+	} 
+	
+	public void enroll(Subject sub, Room room, Professor prof){}
+	public void drop(){}
+	public void confirmAvailability(){}
+	
+	
+	//state machine
+	
+	initial Init;
+	state Waiting; 
+	state CheckResource;
+	state OpenEnroll;
+	state BeingTaugh;
+	
+	transition Initialize{
+		from Init;
+		to Waiting;
+	}
+	
+	transition Control{
+		from Waiting;
+		to CheckResource;
+		trigger Check;
+		effect{
+			log("Everything is OK");
+//			checked();
+		} 
+	}
+	
+	transition Register{
+		from CheckResource;
+		to OpenEnroll;
+		trigger Enroll; 
+	}
+	
+	transition StartClass{
+		from OpenEnroll;
+		to BeingTaugh;
+		trigger TermStarted;
+		effect{
+			Room room = this -> (EnrollmentHasRoom.room).selectAny();
+			send new RoomTaken() to room;
+			Professor prof = this -> (SubjectHasProfessor.professor).selectAny();
+			send new ProfTaken() to prof;
+		}
+	}
+	
+	transition ClassEnd{
+		from BeingTaugh;
+		to Waiting;
+		trigger EndClass;
+		effect{
+			Room room = this -> (EnrollmentHasRoom.room).selectAny();
+			send new RoomAvailable() to room;
+			Professor prof = this -> (SubjectHasProfessor.professor).selectAny();
+			send new ProfAvailable() to prof;
+		}
+	}
+	
+}

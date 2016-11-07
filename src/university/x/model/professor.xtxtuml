@@ -1,0 +1,49 @@
+package university.x.model;
+
+signal ProfAvailable;
+signal ProfTaken;
+
+
+class Professor extends Person{
+	int salary;
+	String title;
+	String department;
+	
+	void assignCourse(){}
+	
+	//State machine
+	initial Init;
+	state Available;
+	state Taken;
+	
+	transition Initialize{
+		from Init;
+		to Available;
+		effect{
+			log("Professor initialize");
+			this -> (SubjectHasProfessor.subjectTaken).selectAny().enrollGui.profAvailable();
+		}
+	}
+	
+	transition ProfOccupied{
+		from Available;
+		to Taken;
+		trigger ProfTaken;
+		effect {
+			log("Professor is taken");
+			this -> (SubjectHasProfessor.subjectTaken).selectAny().enrollGui.profTaken();
+		}
+	}
+	
+	transition ProfFree{
+		from Taken;
+		to Available;
+		trigger ProfAvailable;
+		effect {
+			log("Professor is available");
+			this -> (SubjectHasProfessor.subjectTaken).selectAny().enrollGui.profAvailable();
+		}
+	}
+	
+	
+}

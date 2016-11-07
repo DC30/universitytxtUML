@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_PjIT8JnSEeaMLKgRN7p2rg" name="university">
+    <packageImport xmi:id="_PjRd4JnSEeaMLKgRN7p2rg">
+      <importedPackage xmi:type="uml:Model" href="pathmap://TXTUML_STDLIB/stdlib.uml#_DE5UMHLCEeWVx4ZuxFlarQ"/>
+    </packageImport>
+    <packageImport xmi:id="_Pjk_4JnSEeaMLKgRN7p2rg">
+      <importedPackage xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PldPMJnSEeaMLKgRN7p2rg" name="Student">
+      <generalization xmi:id="_PmIkoJnSEeaMLKgRN7p2rg" general="_PoZ1gJnSEeaMLKgRN7p2rg"/>
+      <ownedAttribute xmi:id="_PledUJnSEeaMLKgRN7p2rg" name="average">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PledUZnSEeaMLKgRN7p2rg" name="codeNeptun">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PlfEYJnSEeaMLKgRN7p2rg" name="isScholarship">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PlfEYZnSEeaMLKgRN7p2rg" name="typeProg">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PoFscZnSEeaMLKgRN7p2rg" name="subjectTaken" type="_PqGeoJnSEeaMLKgRN7p2rg" association="_PoFscJnSEeaMLKgRN7p2rg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PoGTgJnSEeaMLKgRN7p2rg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PoGTgZnSEeaMLKgRN7p2rg" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PprA05nSEeaMLKgRN7p2rg" name="program" type="_PpRYMJnSEeaMLKgRN7p2rg" association="_PpqZwJnSEeaMLKgRN7p2rg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Pprn4JnSEeaMLKgRN7p2rg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Pprn4ZnSEeaMLKgRN7p2rg" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_PlgSgJnSEeaMLKgRN7p2rg" name="addStudent">
+        <ownedParameter xmi:id="_PmE6QJnSEeaMLKgRN7p2rg" name="student" type="_PldPMJnSEeaMLKgRN7p2rg"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_PmE6QZnSEeaMLKgRN7p2rg" name="registerStudent">
+        <ownedParameter xmi:id="_PmE6QpnSEeaMLKgRN7p2rg" name="student" type="_PldPMJnSEeaMLKgRN7p2rg"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_PmE6Q5nSEeaMLKgRN7p2rg" name="assignStudentCode"/>
+      <ownedOperation xmi:id="_PmGIYJnSEeaMLKgRN7p2rg" name="Student"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_PmM2EJnSEeaMLKgRN7p2rg" name="ProfAvailable"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_PmNdIJnSEeaMLKgRN7p2rg" name="ProfAvailable" signal="_PmM2EJnSEeaMLKgRN7p2rg"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PmOEMJnSEeaMLKgRN7p2rg" name="#ProfAvailable_factory">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_PmQgcJnSEeaMLKgRN7p2rg" name="ProfAvailable" specification="_PmPSUJnSEeaMLKgRN7p2rg"/>
+      <ownedOperation xmi:id="_PmPSUJnSEeaMLKgRN7p2rg" name="ProfAvailable" isStatic="true" method="_PmQgcJnSEeaMLKgRN7p2rg">
+        <ownedParameter xmi:id="_PmP5YZnSEeaMLKgRN7p2rg" name="signal" type="_PmM2EJnSEeaMLKgRN7p2rg"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_PmTjwJnSEeaMLKgRN7p2rg" name="InsertPerson"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_PmTjwZnSEeaMLKgRN7p2rg" name="InsertPerson" signal="_PmTjwJnSEeaMLKgRN7p2rg"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PmUK0JnSEeaMLKgRN7p2rg" name="#InsertPerson_factory">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_PmUx4JnSEeaMLKgRN7p2rg" name="InsertPerson" specification="_PmUK0ZnSEeaMLKgRN7p2rg"/>
+      <ownedOperation xmi:id="_PmUK0ZnSEeaMLKgRN7p2rg" name="InsertPerson" isStatic="true" method="_PmUx4JnSEeaMLKgRN7p2rg">
+        <ownedParameter xmi:id="_PmUK05nSEeaMLKgRN7p2rg" name="signal" type="_PmTjwJnSEeaMLKgRN7p2rg"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PmkpgJnSEeaMLKgRN7p2rg" name="Subject">
+      <ownedAttribute xmi:id="_PmkpgZnSEeaMLKgRN7p2rg" name="codeSub">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PmlQkJnSEeaMLKgRN7p2rg" name="creditValue">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PmlQkZnSEeaMLKgRN7p2rg" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PmlQkpnSEeaMLKgRN7p2rg" name="semestre">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PmlQk5nSEeaMLKgRN7p2rg" name="typeSubject">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PoxB4JnSEeaMLKgRN7p2rg" name="master" type="_PpHnMJnSEeaMLKgRN7p2rg" association="_Powa0JnSEeaMLKgRN7p2rg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PoxB4ZnSEeaMLKgRN7p2rg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PoxB4pnSEeaMLKgRN7p2rg" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_Ppy8oJnSEeaMLKgRN7p2rg" name="bachelor" type="_PonQ4JnSEeaMLKgRN7p2rg" association="_PpyVkJnSEeaMLKgRN7p2rg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ppy8oZnSEeaMLKgRN7p2rg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ppy8opnSEeaMLKgRN7p2rg" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PqbOxJnSEeaMLKgRN7p2rg" name="subjectTaken" type="_PqGeoJnSEeaMLKgRN7p2rg" aggregation="composite" association="_PqbOwJnSEeaMLKgRN7p2rg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Pqb10JnSEeaMLKgRN7p2rg" value="8"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Pqb10ZnSEeaMLKgRN7p2rg" value="8"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_PmlQlJnSEeaMLKgRN7p2rg" name="isLecture">
+        <ownedParameter xmi:id="_PmlQlZnSEeaMLKgRN7p2rg" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_Pml3oJnSEeaMLKgRN7p2rg" name="type">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_Pml3oZnSEeaMLKgRN7p2rg" name="Subject"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PmqwIJnSEeaMLKgRN7p2rg" name="University">
+      <ownedAttribute xmi:id="_PmqwIZnSEeaMLKgRN7p2rg" name="id">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PmqwIpnSEeaMLKgRN7p2rg" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_Pn77cJnSEeaMLKgRN7p2rg" name="person" type="_PoZ1gJnSEeaMLKgRN7p2rg" association="_Pn7UYJnSEeaMLKgRN7p2rg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Pn77cZnSEeaMLKgRN7p2rg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Pn8igJnSEeaMLKgRN7p2rg" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PpNt0pnSEeaMLKgRN7p2rg" name="faculty" type="_PpCusJnSEeaMLKgRN7p2rg" association="_PpNGwJnSEeaMLKgRN7p2rg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PpNt05nSEeaMLKgRN7p2rg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PpNt1JnSEeaMLKgRN7p2rg" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_PmqwI5nSEeaMLKgRN7p2rg" name="update"/>
+      <ownedOperation xmi:id="_PmrXMJnSEeaMLKgRN7p2rg" name="drop"/>
+      <ownedOperation xmi:id="_PmrXMZnSEeaMLKgRN7p2rg" name="University"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Pm6nwJnSEeaMLKgRN7p2rg" name="EnrollmentHasRoom" memberEnd="_PpfaoZnSEeaMLKgRN7p2rg _PqGeoZnSEeaMLKgRN7p2rg"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_PnM7oJnSEeaMLKgRN7p2rg" name="EndClass"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_PnM7oZnSEeaMLKgRN7p2rg" name="EndClass" signal="_PnM7oJnSEeaMLKgRN7p2rg"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PnM7opnSEeaMLKgRN7p2rg" name="#EndClass_factory">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_PnNisZnSEeaMLKgRN7p2rg" name="EndClass" specification="_PnM7o5nSEeaMLKgRN7p2rg"/>
+      <ownedOperation xmi:id="_PnM7o5nSEeaMLKgRN7p2rg" name="EndClass" isStatic="true" method="_PnNisZnSEeaMLKgRN7p2rg">
+        <ownedParameter xmi:id="_PnNisJnSEeaMLKgRN7p2rg" name="signal" type="_PnM7oJnSEeaMLKgRN7p2rg"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_PnQmAJnSEeaMLKgRN7p2rg" name="Check"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_PnQmAZnSEeaMLKgRN7p2rg" name="Check" signal="_PnQmAJnSEeaMLKgRN7p2rg"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PnQmApnSEeaMLKgRN7p2rg" name="#Check_factory">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_PnRNEpnSEeaMLKgRN7p2rg" name="Check" specification="_PnQmA5nSEeaMLKgRN7p2rg"/>
+      <ownedOperation xmi:id="_PnQmA5nSEeaMLKgRN7p2rg" name="Check" isStatic="true" method="_PnRNEpnSEeaMLKgRN7p2rg">
+        <ownedParameter xmi:id="_PnRNEZnSEeaMLKgRN7p2rg" name="signal" type="_PnQmAJnSEeaMLKgRN7p2rg"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PnugEJnSEeaMLKgRN7p2rg" name="Professor" classifierBehavior="_PnwVQJnSEeaMLKgRN7p2rg">
+      <generalization xmi:id="_PnvHIpnSEeaMLKgRN7p2rg" general="_PoZ1gJnSEeaMLKgRN7p2rg"/>
+      <ownedAttribute xmi:id="_PnugEZnSEeaMLKgRN7p2rg" name="department">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PnugEpnSEeaMLKgRN7p2rg" name="salary">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PnugE5nSEeaMLKgRN7p2rg" name="title">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_Po-dQZnSEeaMLKgRN7p2rg" name="subjectTaken" type="_PqGeoJnSEeaMLKgRN7p2rg" association="_Po-dQJnSEeaMLKgRN7p2rg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Po-dQpnSEeaMLKgRN7p2rg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Po-dQ5nSEeaMLKgRN7p2rg" value="1"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_PnwVQJnSEeaMLKgRN7p2rg" name="Professor">
+        <region xmi:id="_PnwVQZnSEeaMLKgRN7p2rg" name="Professor">
+          <transition xmi:id="_PnxjYpnSEeaMLKgRN7p2rg" name="Initialize" source="_Pnw8UJnSEeaMLKgRN7p2rg" target="_PnxjYJnSEeaMLKgRN7p2rg"/>
+          <transition xmi:id="_PnyxgJnSEeaMLKgRN7p2rg" name="ProfOccupied" source="_PnxjYJnSEeaMLKgRN7p2rg" target="_PnxjYZnSEeaMLKgRN7p2rg">
+            <trigger xmi:id="_PnyxgZnSEeaMLKgRN7p2rg" name="null_trigger" event="_PoiYYZnSEeaMLKgRN7p2rg"/>
+          </transition>
+          <transition xmi:id="_PnyxgpnSEeaMLKgRN7p2rg" name="ProfFree" source="_PnxjYZnSEeaMLKgRN7p2rg" target="_PnxjYJnSEeaMLKgRN7p2rg">
+            <trigger xmi:id="_PnzYkJnSEeaMLKgRN7p2rg" name="ProfAvailable_trigger" event="_PmNdIJnSEeaMLKgRN7p2rg"/>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_Pnw8UJnSEeaMLKgRN7p2rg" name="Init"/>
+          <subvertex xmi:type="uml:State" xmi:id="_PnxjYJnSEeaMLKgRN7p2rg" name="Available"/>
+          <subvertex xmi:type="uml:State" xmi:id="_PnxjYZnSEeaMLKgRN7p2rg" name="Taken"/>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_PnugFJnSEeaMLKgRN7p2rg" name="assignCourse"/>
+      <ownedOperation xmi:id="_PnvHIJnSEeaMLKgRN7p2rg" name="Professor"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Pn7UYJnSEeaMLKgRN7p2rg" name="UniversityHasPerson" memberEnd="_PoZ1gZnSEeaMLKgRN7p2rg _Pn77cJnSEeaMLKgRN7p2rg"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_PoFscJnSEeaMLKgRN7p2rg" name="Enrolled" memberEnd="_PqGepJnSEeaMLKgRN7p2rg _PoFscZnSEeaMLKgRN7p2rg"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_PoNoQJnSEeaMLKgRN7p2rg" name="FacultyHasProgram" memberEnd="_PpRYMZnSEeaMLKgRN7p2rg _PpCusZnSEeaMLKgRN7p2rg"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PoZ1gJnSEeaMLKgRN7p2rg" name="Person" classifierBehavior="_Poc40JnSEeaMLKgRN7p2rg">
+      <ownedAttribute xmi:id="_PoZ1gZnSEeaMLKgRN7p2rg" name="university" type="_PmqwIJnSEeaMLKgRN7p2rg" association="_Pn7UYJnSEeaMLKgRN7p2rg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PoZ1gpnSEeaMLKgRN7p2rg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PoZ1g5nSEeaMLKgRN7p2rg" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PoackJnSEeaMLKgRN7p2rg" name="birthDate">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PobDoJnSEeaMLKgRN7p2rg" name="emailAddress">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PobDoZnSEeaMLKgRN7p2rg" name="id">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PobDopnSEeaMLKgRN7p2rg" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PobDo5nSEeaMLKgRN7p2rg" name="phoneNumber">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PobDpJnSEeaMLKgRN7p2rg" name="typePerson">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_Poc40JnSEeaMLKgRN7p2rg" name="Person">
+        <region xmi:id="_Poc40ZnSEeaMLKgRN7p2rg" name="Person">
+          <transition xmi:id="_Podf45nSEeaMLKgRN7p2rg" name="Register" source="_Poc40pnSEeaMLKgRN7p2rg" target="_Poc405nSEeaMLKgRN7p2rg"/>
+          <transition xmi:id="_PoeG8JnSEeaMLKgRN7p2rg" name="ChoosePerson" source="_Poc405nSEeaMLKgRN7p2rg" target="_Podf4JnSEeaMLKgRN7p2rg">
+            <trigger xmi:id="_PoeG8ZnSEeaMLKgRN7p2rg" name="InsertPerson_trigger" event="_PmTjwZnSEeaMLKgRN7p2rg"/>
+          </transition>
+          <transition xmi:id="_PoeuAJnSEeaMLKgRN7p2rg" name="IsProfessor" source="_Podf4JnSEeaMLKgRN7p2rg" target="_Podf4ZnSEeaMLKgRN7p2rg"/>
+          <transition xmi:id="_PoeuAZnSEeaMLKgRN7p2rg" name="IsStudent" source="_Podf4JnSEeaMLKgRN7p2rg" target="_Podf4pnSEeaMLKgRN7p2rg"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_Poc40pnSEeaMLKgRN7p2rg" name="Init"/>
+          <subvertex xmi:type="uml:State" xmi:id="_Poc405nSEeaMLKgRN7p2rg" name="InsertData"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_Podf4JnSEeaMLKgRN7p2rg" name="SelectPerson" kind="choice"/>
+          <subvertex xmi:type="uml:State" xmi:id="_Podf4ZnSEeaMLKgRN7p2rg" name="InsertProfessor"/>
+          <subvertex xmi:type="uml:State" xmi:id="_Podf4pnSEeaMLKgRN7p2rg" name="InsertStudent"/>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_PobDpZnSEeaMLKgRN7p2rg" name="update">
+        <ownedParameter xmi:id="_PobDppnSEeaMLKgRN7p2rg" name="per" type="_PoZ1gJnSEeaMLKgRN7p2rg"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_PobqsJnSEeaMLKgRN7p2rg" name="drop"/>
+      <ownedOperation xmi:id="_PobqsZnSEeaMLKgRN7p2rg" name="getTypePerson">
+        <ownedParameter xmi:id="_PobqspnSEeaMLKgRN7p2rg" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_Pobqs5nSEeaMLKgRN7p2rg" name="setTypePerson">
+        <ownedParameter xmi:id="_PobqtJnSEeaMLKgRN7p2rg" name="typePerson">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_PobqtZnSEeaMLKgRN7p2rg" name="getName">
+        <ownedParameter xmi:id="_PobqtpnSEeaMLKgRN7p2rg" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_Pobqt5nSEeaMLKgRN7p2rg" name="setName">
+        <ownedParameter xmi:id="_PocRwJnSEeaMLKgRN7p2rg" name="name">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_PocRwZnSEeaMLKgRN7p2rg" name="Person"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_PoiYYJnSEeaMLKgRN7p2rg" name="ProfTaken"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_PoiYYZnSEeaMLKgRN7p2rg" name="ProfTaken" signal="_PoiYYJnSEeaMLKgRN7p2rg"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PoiYYpnSEeaMLKgRN7p2rg" name="#ProfTaken_factory">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_Poi_c5nSEeaMLKgRN7p2rg" name="ProfTaken" specification="_Poi_cJnSEeaMLKgRN7p2rg"/>
+      <ownedOperation xmi:id="_Poi_cJnSEeaMLKgRN7p2rg" name="ProfTaken" isStatic="true" method="_Poi_c5nSEeaMLKgRN7p2rg">
+        <ownedParameter xmi:id="_Poi_cpnSEeaMLKgRN7p2rg" name="signal" type="_PoiYYJnSEeaMLKgRN7p2rg"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PonQ4JnSEeaMLKgRN7p2rg" name="Bachelor">
+      <generalization xmi:id="_PoofAJnSEeaMLKgRN7p2rg" general="_PpRYMJnSEeaMLKgRN7p2rg"/>
+      <ownedAttribute xmi:id="_PonQ4ZnSEeaMLKgRN7p2rg" name="admisionTest">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_Pon38JnSEeaMLKgRN7p2rg" name="skill">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_Pon38ZnSEeaMLKgRN7p2rg" name="specializations">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_Ppy8o5nSEeaMLKgRN7p2rg" name="subject" type="_PmkpgJnSEeaMLKgRN7p2rg" aggregation="composite" association="_PpyVkJnSEeaMLKgRN7p2rg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PpzjsJnSEeaMLKgRN7p2rg" value="30"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PpzjsZnSEeaMLKgRN7p2rg" value="30"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_Pon38pnSEeaMLKgRN7p2rg" name="findCandidateBachelorStudent"/>
+      <ownedOperation xmi:id="_Pon385nSEeaMLKgRN7p2rg" name="Bachelor"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Powa0JnSEeaMLKgRN7p2rg" name="MasterHasSubject" memberEnd="_PoxB4JnSEeaMLKgRN7p2rg _PpHnMZnSEeaMLKgRN7p2rg"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_Po16YJnSEeaMLKgRN7p2rg" name="RoomTaken"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_Po16YZnSEeaMLKgRN7p2rg" name="RoomTaken" signal="_Po16YJnSEeaMLKgRN7p2rg"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Po16YpnSEeaMLKgRN7p2rg" name="#RoomTaken_factory">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_Po2hcZnSEeaMLKgRN7p2rg" name="RoomTaken" specification="_Po16Y5nSEeaMLKgRN7p2rg"/>
+      <ownedOperation xmi:id="_Po16Y5nSEeaMLKgRN7p2rg" name="RoomTaken" isStatic="true" method="_Po2hcZnSEeaMLKgRN7p2rg">
+        <ownedParameter xmi:id="_Po2hcJnSEeaMLKgRN7p2rg" name="signal" type="_Po16YJnSEeaMLKgRN7p2rg"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Po-dQJnSEeaMLKgRN7p2rg" name="SubjectHasProfessor" memberEnd="_Po-dQZnSEeaMLKgRN7p2rg _PqGep5nSEeaMLKgRN7p2rg"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PpCusJnSEeaMLKgRN7p2rg" name="Faculty">
+      <ownedAttribute xmi:id="_PpCusZnSEeaMLKgRN7p2rg" name="program" type="_PpRYMJnSEeaMLKgRN7p2rg" association="_PoNoQJnSEeaMLKgRN7p2rg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PpCuspnSEeaMLKgRN7p2rg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PpCus5nSEeaMLKgRN7p2rg" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PpCutJnSEeaMLKgRN7p2rg" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PpCutZnSEeaMLKgRN7p2rg" name="phone">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PpNGwZnSEeaMLKgRN7p2rg" name="university" type="_PmqwIJnSEeaMLKgRN7p2rg" association="_PpNGwJnSEeaMLKgRN7p2rg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PpNt0JnSEeaMLKgRN7p2rg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PpNt0ZnSEeaMLKgRN7p2rg" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_PpCutpnSEeaMLKgRN7p2rg" name="addProgram">
+        <ownedParameter xmi:id="_PpCut5nSEeaMLKgRN7p2rg" name="program" type="_PpRYMJnSEeaMLKgRN7p2rg"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_PpCuuJnSEeaMLKgRN7p2rg" name="Faculty"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PpHnMJnSEeaMLKgRN7p2rg" name="Master">
+      <generalization xmi:id="_PpIORpnSEeaMLKgRN7p2rg" general="_PpRYMJnSEeaMLKgRN7p2rg"/>
+      <ownedAttribute xmi:id="_PpHnMZnSEeaMLKgRN7p2rg" name="subject" type="_PmkpgJnSEeaMLKgRN7p2rg" aggregation="composite" association="_Powa0JnSEeaMLKgRN7p2rg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PpHnMpnSEeaMLKgRN7p2rg" value="20"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PpHnM5nSEeaMLKgRN7p2rg" value="20"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PpIOQJnSEeaMLKgRN7p2rg" name="fieldExperience">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PpIOQZnSEeaMLKgRN7p2rg" name="level">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PpIOQpnSEeaMLKgRN7p2rg" name="specializations">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_PpIOQ5nSEeaMLKgRN7p2rg" name="findCandidateStudent"/>
+      <ownedOperation xmi:id="_PpIORJnSEeaMLKgRN7p2rg" name="Master"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_PpNGwJnSEeaMLKgRN7p2rg" name="UniversityHasFaculty" memberEnd="_PpNGwZnSEeaMLKgRN7p2rg _PpNt0pnSEeaMLKgRN7p2rg"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PpRYMJnSEeaMLKgRN7p2rg" name="DegreeProgram">
+      <ownedAttribute xmi:id="_PpRYMZnSEeaMLKgRN7p2rg" name="faculty" type="_PpCusJnSEeaMLKgRN7p2rg" association="_PoNoQJnSEeaMLKgRN7p2rg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PpRYMpnSEeaMLKgRN7p2rg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PpRYM5nSEeaMLKgRN7p2rg" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PpRYNJnSEeaMLKgRN7p2rg" name="codeProgram">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PpRYNZnSEeaMLKgRN7p2rg" name="mision">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PpR_QJnSEeaMLKgRN7p2rg" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PpR_QZnSEeaMLKgRN7p2rg" name="vision">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PprA0JnSEeaMLKgRN7p2rg" name="student" type="_PldPMJnSEeaMLKgRN7p2rg" association="_PpqZwJnSEeaMLKgRN7p2rg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PprA0ZnSEeaMLKgRN7p2rg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PprA0pnSEeaMLKgRN7p2rg" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_PpR_QpnSEeaMLKgRN7p2rg" name="update"/>
+      <ownedOperation xmi:id="_PpR_Q5nSEeaMLKgRN7p2rg" name="drop"/>
+      <ownedOperation xmi:id="_PpR_RJnSEeaMLKgRN7p2rg" name="DegreeProgram"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PpfaoJnSEeaMLKgRN7p2rg" name="Room" classifierBehavior="_PpgowJnSEeaMLKgRN7p2rg">
+      <ownedAttribute xmi:id="_PpfaoZnSEeaMLKgRN7p2rg" name="subjectTaken" type="_PqGeoJnSEeaMLKgRN7p2rg" association="_Pm6nwJnSEeaMLKgRN7p2rg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PpfaopnSEeaMLKgRN7p2rg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ppfao5nSEeaMLKgRN7p2rg" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PpfapJnSEeaMLKgRN7p2rg" name="capacity">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PpfapZnSEeaMLKgRN7p2rg" name="floor">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PpfappnSEeaMLKgRN7p2rg" name="number">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_PpgowJnSEeaMLKgRN7p2rg" name="Room">
+        <region xmi:id="_PpgowZnSEeaMLKgRN7p2rg" name="Room">
+          <transition xmi:id="_PpgoxZnSEeaMLKgRN7p2rg" name="Initialize" source="_PpgowpnSEeaMLKgRN7p2rg" target="_Ppgow5nSEeaMLKgRN7p2rg"/>
+          <transition xmi:id="_PphP0JnSEeaMLKgRN7p2rg" name="RoomOccupied" source="_Ppgow5nSEeaMLKgRN7p2rg" target="_PpgoxJnSEeaMLKgRN7p2rg">
+            <trigger xmi:id="_PphP0ZnSEeaMLKgRN7p2rg" name="RoomTaken_trigger" event="_Po16YZnSEeaMLKgRN7p2rg"/>
+          </transition>
+          <transition xmi:id="_PphP0pnSEeaMLKgRN7p2rg" name="RoomFree" source="_PpgoxJnSEeaMLKgRN7p2rg" target="_Ppgow5nSEeaMLKgRN7p2rg">
+            <trigger xmi:id="_Pph24JnSEeaMLKgRN7p2rg" name="null_trigger" event="_PpkTIZnSEeaMLKgRN7p2rg"/>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_PpgowpnSEeaMLKgRN7p2rg" name="Init"/>
+          <subvertex xmi:type="uml:State" xmi:id="_Ppgow5nSEeaMLKgRN7p2rg" name="Available"/>
+          <subvertex xmi:type="uml:State" xmi:id="_PpgoxJnSEeaMLKgRN7p2rg" name="Taken"/>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_PpgBsJnSEeaMLKgRN7p2rg" name="update"/>
+      <ownedOperation xmi:id="_PpgBsZnSEeaMLKgRN7p2rg" name="drop"/>
+      <ownedOperation xmi:id="_PpgBspnSEeaMLKgRN7p2rg" name="Room"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_PpkTIJnSEeaMLKgRN7p2rg" name="RoomAvailable"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_PpkTIZnSEeaMLKgRN7p2rg" name="RoomAvailable" signal="_PpkTIJnSEeaMLKgRN7p2rg"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PpkTIpnSEeaMLKgRN7p2rg" name="#RoomAvailable_factory">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_Ppk6M5nSEeaMLKgRN7p2rg" name="RoomAvailable" specification="_Ppk6MJnSEeaMLKgRN7p2rg"/>
+      <ownedOperation xmi:id="_Ppk6MJnSEeaMLKgRN7p2rg" name="RoomAvailable" isStatic="true" method="_Ppk6M5nSEeaMLKgRN7p2rg">
+        <ownedParameter xmi:id="_Ppk6MpnSEeaMLKgRN7p2rg" name="signal" type="_PpkTIJnSEeaMLKgRN7p2rg"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_PpqZwJnSEeaMLKgRN7p2rg" name="StudentBelongsProgram" memberEnd="_PprA0JnSEeaMLKgRN7p2rg _PprA05nSEeaMLKgRN7p2rg"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_PpyVkJnSEeaMLKgRN7p2rg" name="BachelorHasSubject" memberEnd="_Ppy8oJnSEeaMLKgRN7p2rg _Ppy8o5nSEeaMLKgRN7p2rg"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PqGeoJnSEeaMLKgRN7p2rg" name="Enrollment" classifierBehavior="_PqRdwJnSEeaMLKgRN7p2rg">
+      <ownedAttribute xmi:id="_PqGeoZnSEeaMLKgRN7p2rg" name="room" type="_PpfaoJnSEeaMLKgRN7p2rg" aggregation="composite" association="_Pm6nwJnSEeaMLKgRN7p2rg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PqGeopnSEeaMLKgRN7p2rg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PqGeo5nSEeaMLKgRN7p2rg" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PqGepJnSEeaMLKgRN7p2rg" name="student" type="_PldPMJnSEeaMLKgRN7p2rg" association="_PoFscJnSEeaMLKgRN7p2rg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PqGepZnSEeaMLKgRN7p2rg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PqGeppnSEeaMLKgRN7p2rg" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PqGep5nSEeaMLKgRN7p2rg" name="professor" type="_PnugEJnSEeaMLKgRN7p2rg" aggregation="composite" association="_Po-dQJnSEeaMLKgRN7p2rg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PqGeqJnSEeaMLKgRN7p2rg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PqGeqZnSEeaMLKgRN7p2rg" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PqGeqpnSEeaMLKgRN7p2rg" name="dateOfWeek">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PqGeq5nSEeaMLKgRN7p2rg" name="enrollGui"/>
+      <ownedAttribute xmi:id="_PqPokJnSEeaMLKgRN7p2rg" name="timeSlot">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_PqbOwZnSEeaMLKgRN7p2rg" name="subject" type="_PmkpgJnSEeaMLKgRN7p2rg" association="_PqbOwJnSEeaMLKgRN7p2rg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PqbOwpnSEeaMLKgRN7p2rg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PqbOw5nSEeaMLKgRN7p2rg" value="1"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_PqRdwJnSEeaMLKgRN7p2rg" name="Enrollment">
+        <region xmi:id="_PqRdwZnSEeaMLKgRN7p2rg" name="Enrollment">
+          <transition xmi:id="_PqSE0pnSEeaMLKgRN7p2rg" name="Initialize" source="_PqRdwpnSEeaMLKgRN7p2rg" target="_PqRdw5nSEeaMLKgRN7p2rg"/>
+          <transition xmi:id="_PqSE05nSEeaMLKgRN7p2rg" name="Control" source="_PqRdw5nSEeaMLKgRN7p2rg" target="_PqRdxJnSEeaMLKgRN7p2rg">
+            <trigger xmi:id="_PqSr4JnSEeaMLKgRN7p2rg" name="Check_trigger" event="_PnQmAZnSEeaMLKgRN7p2rg"/>
+          </transition>
+          <transition xmi:id="_PqSr4ZnSEeaMLKgRN7p2rg" name="Register" source="_PqRdxJnSEeaMLKgRN7p2rg" target="_PqSE0JnSEeaMLKgRN7p2rg">
+            <trigger xmi:id="_PqTS8JnSEeaMLKgRN7p2rg" name="null_trigger" event="_PqeSEZnSEeaMLKgRN7p2rg"/>
+          </transition>
+          <transition xmi:id="_PqT6AJnSEeaMLKgRN7p2rg" name="StartClass" source="_PqSE0JnSEeaMLKgRN7p2rg" target="_PqSE0ZnSEeaMLKgRN7p2rg">
+            <trigger xmi:id="_PqT6AZnSEeaMLKgRN7p2rg" name="null_trigger" event="_PqijgZnSEeaMLKgRN7p2rg"/>
+          </transition>
+          <transition xmi:id="_PqUhEJnSEeaMLKgRN7p2rg" name="ClassEnd" source="_PqSE0ZnSEeaMLKgRN7p2rg" target="_PqRdw5nSEeaMLKgRN7p2rg">
+            <trigger xmi:id="_PqUhEZnSEeaMLKgRN7p2rg" name="EndClass_trigger" event="_PnM7oZnSEeaMLKgRN7p2rg"/>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_PqRdwpnSEeaMLKgRN7p2rg" name="Init"/>
+          <subvertex xmi:type="uml:State" xmi:id="_PqRdw5nSEeaMLKgRN7p2rg" name="Waiting"/>
+          <subvertex xmi:type="uml:State" xmi:id="_PqRdxJnSEeaMLKgRN7p2rg" name="CheckResource"/>
+          <subvertex xmi:type="uml:State" xmi:id="_PqSE0JnSEeaMLKgRN7p2rg" name="OpenEnroll"/>
+          <subvertex xmi:type="uml:State" xmi:id="_PqSE0ZnSEeaMLKgRN7p2rg" name="BeingTaugh"/>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_PqQPoJnSEeaMLKgRN7p2rg" name="Enrollment"/>
+      <ownedOperation xmi:id="_PqQPopnSEeaMLKgRN7p2rg" name="enroll">
+        <ownedParameter xmi:id="_PqQ2sJnSEeaMLKgRN7p2rg" name="sub" type="_PmkpgJnSEeaMLKgRN7p2rg"/>
+        <ownedParameter xmi:id="_PqQ2sZnSEeaMLKgRN7p2rg" name="room" type="_PpfaoJnSEeaMLKgRN7p2rg"/>
+        <ownedParameter xmi:id="_PqQ2spnSEeaMLKgRN7p2rg" name="prof" type="_PnugEJnSEeaMLKgRN7p2rg"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_PqQ2s5nSEeaMLKgRN7p2rg" name="drop"/>
+      <ownedOperation xmi:id="_PqQ2tJnSEeaMLKgRN7p2rg" name="confirmAvailability"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_PqbOwJnSEeaMLKgRN7p2rg" name="SubjectHasEnrolment" memberEnd="_PqbOwZnSEeaMLKgRN7p2rg _PqbOxJnSEeaMLKgRN7p2rg"/>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_PqeSEJnSEeaMLKgRN7p2rg" name="Enroll"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_PqeSEZnSEeaMLKgRN7p2rg" name="Enroll" signal="_PqeSEJnSEeaMLKgRN7p2rg"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PqeSEpnSEeaMLKgRN7p2rg" name="#Enroll_factory">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_PqfgMJnSEeaMLKgRN7p2rg" name="Enroll" specification="_Pqe5IJnSEeaMLKgRN7p2rg"/>
+      <ownedOperation xmi:id="_Pqe5IJnSEeaMLKgRN7p2rg" name="Enroll" isStatic="true" method="_PqfgMJnSEeaMLKgRN7p2rg">
+        <ownedParameter xmi:id="_Pqe5IpnSEeaMLKgRN7p2rg" name="signal" type="_PqeSEJnSEeaMLKgRN7p2rg"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Signal" xmi:id="_PqijgJnSEeaMLKgRN7p2rg" name="TermStarted"/>
+    <packagedElement xmi:type="uml:SignalEvent" xmi:id="_PqijgZnSEeaMLKgRN7p2rg" name="TermStarted" signal="_PqijgJnSEeaMLKgRN7p2rg"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_PqijgpnSEeaMLKgRN7p2rg" name="#TermStarted_factory">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_PqjKk5nSEeaMLKgRN7p2rg" name="TermStarted" specification="_PqjKkJnSEeaMLKgRN7p2rg"/>
+      <ownedOperation xmi:id="_PqjKkJnSEeaMLKgRN7p2rg" name="TermStarted" isStatic="true" method="_PqjKk5nSEeaMLKgRN7p2rg">
+        <ownedParameter xmi:id="_PqjKkpnSEeaMLKgRN7p2rg" name="signal" type="_PqijgJnSEeaMLKgRN7p2rg"/>
+      </ownedOperation>
+    </packagedElement>
+    <profileApplication xmi:id="_Pjlm8JnSEeaMLKgRN7p2rg">
+      <eAnnotations xmi:id="_PjncIJnSEeaMLKgRN7p2rg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <standard:Create xmi:id="_PmH9kJnSEeaMLKgRN7p2rg" base_BehavioralFeature="_PmGIYJnSEeaMLKgRN7p2rg"/>
+  <standard:Create xmi:id="_PmP5YJnSEeaMLKgRN7p2rg" base_BehavioralFeature="_PmPSUJnSEeaMLKgRN7p2rg"/>
+  <standard:Create xmi:id="_PmUK0pnSEeaMLKgRN7p2rg" base_BehavioralFeature="_PmUK0ZnSEeaMLKgRN7p2rg"/>
+  <standard:Create xmi:id="_Pml3opnSEeaMLKgRN7p2rg" base_BehavioralFeature="_Pml3oZnSEeaMLKgRN7p2rg"/>
+  <standard:Create xmi:id="_PmrXMpnSEeaMLKgRN7p2rg" base_BehavioralFeature="_PmrXMZnSEeaMLKgRN7p2rg"/>
+  <standard:Create xmi:id="_PnM7pJnSEeaMLKgRN7p2rg" base_BehavioralFeature="_PnM7o5nSEeaMLKgRN7p2rg"/>
+  <standard:Create xmi:id="_PnRNEJnSEeaMLKgRN7p2rg" base_BehavioralFeature="_PnQmA5nSEeaMLKgRN7p2rg"/>
+  <standard:Create xmi:id="_PnvHIZnSEeaMLKgRN7p2rg" base_BehavioralFeature="_PnvHIJnSEeaMLKgRN7p2rg"/>
+  <standard:Create xmi:id="_PocRwpnSEeaMLKgRN7p2rg" base_BehavioralFeature="_PocRwZnSEeaMLKgRN7p2rg"/>
+  <standard:Create xmi:id="_Poi_cZnSEeaMLKgRN7p2rg" base_BehavioralFeature="_Poi_cJnSEeaMLKgRN7p2rg"/>
+  <standard:Create xmi:id="_Pon39JnSEeaMLKgRN7p2rg" base_BehavioralFeature="_Pon385nSEeaMLKgRN7p2rg"/>
+  <standard:Create xmi:id="_Po16ZJnSEeaMLKgRN7p2rg" base_BehavioralFeature="_Po16Y5nSEeaMLKgRN7p2rg"/>
+  <standard:Create xmi:id="_PpDVwJnSEeaMLKgRN7p2rg" base_BehavioralFeature="_PpCuuJnSEeaMLKgRN7p2rg"/>
+  <standard:Create xmi:id="_PpIORZnSEeaMLKgRN7p2rg" base_BehavioralFeature="_PpIORJnSEeaMLKgRN7p2rg"/>
+  <standard:Create xmi:id="_PpR_RZnSEeaMLKgRN7p2rg" base_BehavioralFeature="_PpR_RJnSEeaMLKgRN7p2rg"/>
+  <standard:Create xmi:id="_PpgBs5nSEeaMLKgRN7p2rg" base_BehavioralFeature="_PpgBspnSEeaMLKgRN7p2rg"/>
+  <standard:Create xmi:id="_Ppk6MZnSEeaMLKgRN7p2rg" base_BehavioralFeature="_Ppk6MJnSEeaMLKgRN7p2rg"/>
+  <standard:Create xmi:id="_PqQPoZnSEeaMLKgRN7p2rg" base_BehavioralFeature="_PqQPoJnSEeaMLKgRN7p2rg"/>
+  <standard:Create xmi:id="_Pqe5IZnSEeaMLKgRN7p2rg" base_BehavioralFeature="_Pqe5IJnSEeaMLKgRN7p2rg"/>
+  <standard:Create xmi:id="_PqjKkZnSEeaMLKgRN7p2rg" base_BehavioralFeature="_PqjKkJnSEeaMLKgRN7p2rg"/>
+</xmi:XMI>
