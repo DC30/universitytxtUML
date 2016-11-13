@@ -8,5 +8,6 @@ public interface EnrollInterface extends ExternalClass{
 	public void roomTaken();
 	public void profAvailable();
 	public void profTaken();
+	
 
 }
