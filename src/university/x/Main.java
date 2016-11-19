@@ -20,7 +20,7 @@ public class Main {
 	}
 	
 	public static void main(String[] args) throws IOException {
-		ModelExecutor.create().setTraceLogging(true).start(Main::init);// we can use awaitinitialization to not use the system rin read
+		ModelExecutor.create().setTraceLogging(true).start(Main::init);// we can use await initialization to not use the system in read
 		System.in.read();
 		Action.send(new Check(), enrollment);
 		Action.send(new Enroll(), enrollment);
